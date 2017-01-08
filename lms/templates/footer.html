@@ -18,20 +18,10 @@
     % endif
   >
     <div class="colophon">
-      <nav class="nav-colophon" aria-label="${_('About')}">
-        <ol>
-            % for item_num, link in enumerate(footer['navigation_links'], start=1):
-            <li class="nav-colophon-0${item_num}">
-              <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
-            </li>
-            % endfor
-        </ol>
-      </nav>
-
       <div class="wrapper-logo">
         <p>
           <a href="/">
-            <img alt="Craft Academy Logo" src="${static.url("images/logo.png")}">
+            <img alt="Craft Academy Logo" src="${static.url("images/logo-footer.png")}">
           </a>
         </p>
       </div>
