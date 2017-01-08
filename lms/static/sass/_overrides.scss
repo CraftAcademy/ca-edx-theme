@@ -1,0 +1,29 @@
+.header-global h1.logo img {
+  max-height: 40px;
+}
+
+.home > header {
+  background: url('../craftacademy/images/splash_3.jpg');
+  background-position: 50%;
+  background-size: cover;
+
+  .outer-wrapper {
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  .title {
+    background: transparent;
+    box-shadow: none;
+    margin-left: 0;
+
+    > .heading-group h1 {
+      color: $white;
+      text-shadow: none;
+    }
+
+    > .heading-group p {
+      color: $white;
+    }
+  }
+}
