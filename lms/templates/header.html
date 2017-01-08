@@ -50,13 +50,7 @@ site_status_msg = get_site_status_msg(course_id)
 
 
 <header id="global-navigation" class="header-global ${"slim" if course else ""}" >
-    <nav class="wrapper-header" aria-label="${_('Global')}">
-      <h1 class="logo">
-        <a href="${marketing_link('ROOT')}">
-          <%block name="navigation_logo">
-          </%block>
-        </a>
-      </h1>
+  <nav class="wrapper-header" aria-label="${_('Global')}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
