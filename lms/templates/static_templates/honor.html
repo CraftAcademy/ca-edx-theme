@@ -3,25 +3,59 @@
 
 <%block name="pagetitle">${_("Terms and Conditions")}</%block>
 <style>
-    p {
-        color: grey;
-        margin: 10px 10px 10px 10px;
-        font-size: 14px;
+    @font-face {
+        font-family:'gotham-light';src:url("//assets.craftacademy.se/fonts/gotham-light-webfont.eot");src:url("//assets.craftacademy.se/fonts/gotham-light-webfont.eot?#iefix") format("embedded-opentype"),url("//assets.craftacademy.se/fonts/gotham-light-webfont.woff") format("woff"),url("//assets.craftacademy.se/fonts/gotham-light-webfont.ttf") format("truetype"),url("//assets.craftacademy.se/fonts/gotham-light-webfont.svg#linea-arrows-10") format("svg");font-weight:normal;font-style:normal
     }
 
-    li {
-        color: grey;
-        font-size: 14px;
+    @font-face {
+        font-family:'gotham-medium';src:url("//assets.craftacademy.se/fonts/gotham-medium-webfont.eot");src:url("//assets.craftacademy.se/fonts/gotham-medium-webfont.eot?#iefix") format("embedded-opentype"),url("//assets.craftacademy.se/fonts/gotham-medium-webfont.woff") format("woff"),url("//assets.craftacademy.se/fonts/gotham-medium-webfont.ttf") format("truetype"),url("//assets.craftacademy.se/fonts/gotham-medium-webfont.svg#linea-arrows-10") format("svg");font-weight:normal;font-style:normal
     }
 
-    h1, h2, h3 {
-        text-transform: uppercase !important;
+    p, .article p, .article li {
+        margin: 0 0 1.5rem;
+        font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.5rem
     }
 
+    .article ol {
+        list-style-type: decimal;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+        font-size: 16px;
+        line-height: 1.5rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        text-rendering: optimizeLegibility;
+        font-weight: 500;
+        color: #f28e24;
+        margin: 0 0 1.5rem
+    }
+
+    ul.default-ul,.article article ul,.article--left article ul,.article--centered article ul,.article--right article ul,ol.default-ul {
+        list-style-type: disc;
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        text-align: left;
+        margin-bottom: 1.5rem
+    }
+
+    ul.default-ol,ol.default-ol,.article article ol,.article--left article ol,.article--centered article ol,.article--right article ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem
+    }
+
+    .article article h3,.article--left article h3,.article--centered article h3,.article--right article h3 {
+        font-weight: 500;
+        text-transform: uppercase
+    }
 </style>
 
 
-<section class="static-container honor">
+<section class="container article">
     <h1>${_("Terms and Conditions")}</h1>
     <h3>Background</h3>
     <p>
@@ -132,8 +166,7 @@
         Academy,
         or in any other external relations when representing Craft Academy or the education.
     </p>
-    <p></p>
-    Further to the above, when partaking in a Course, you agree to not
+    <p>Further to the above, when partaking in a Course, you agree to not</p>
     <ul>
         <li>damage any property belonging to Craft Academy, other Students or present at the premises,</li>
         <li>cause nuisance, impair collaboration with or between other Students, disturbe the possibilities to provide a
