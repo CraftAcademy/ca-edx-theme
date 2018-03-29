@@ -1,5 +1,9 @@
-.header-global h1.logo img {
-  max-height: 40px;
+.header-global {
+  border-bottom: 2px solid transparent;
+
+  h1.logo img {
+    max-height: 40px;
+  }
 }
 
 .home > header {
@@ -32,4 +36,23 @@
   p {
     font-size: .9em;
   }
+}
+
+.courses-container .courses .course {
+  border-bottom: 3px solid #f28e24;
+}
+
+.intro-inner-wrapper > .table > .intro > .heading-group {
+  h1 > button {
+    display: none;
+  }
+}
+
+.course-info header.course-profile {
+    background-image: url(https://assets.craftacademy.se/images/backgrounds/splash_1.jpg);
+}
+
+.course-info header.course-profile .intro-inner-wrapper {
+    border: none;
+    box-shadow: none;
 }
