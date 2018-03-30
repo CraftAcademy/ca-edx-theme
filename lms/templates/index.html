@@ -1,70 +1,75 @@
 <%inherit file="main.html" />
 <%!
-from django.utils.translation import ugettext as _
-from openedx.core.djangolib.markup import HTML
+    from django.utils.translation import ugettext as _
+    from openedx.core.djangolib.markup import HTML
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
-  <section class="home">
-    <header>
-      <div class="outer-wrapper">
-        <div class="title">
-          <div class="heading-group">
-            % if homepage_overlay_html:
-              ${homepage_overlay_html}
-            % else:
-              <h1>${_(HTML("Welcome to class <strong>{university_name}</strong>")).format(university_name="Craft Academy")}</h1>
-              <p>${_("Our Learning Management System runs on Open EdX")}</p>
-            % endif
-          </div>
-          % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-            <div class="course-search">
-              <form method="get" action="/courses">
-                <label><span class="sr">${_("Search for a course")}</span>
-                  <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
-                </label>
-                <button class="search-button" type="submit">
-                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-                </button>
-              </form>
+    <section class="home">
+        <header>
+            <div class="outer-wrapper">
+                <div class="title">
+                    <div class="heading-group">
+                        <h1>Craft Academy  <strong>Professional Education </strong></h1>
+                        <p>Redefining online learning</p>
+                    </div>
+                    % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+                        <div class="course-search">
+                            <form method="get" action="/courses">
+                                <label><span class="sr">${_("Search for a course")}</span>
+                                    <input class="search-input" name="search_query" type="text"
+                                           placeholder="${_("Search for a course")}"></input>
+                                </label>
+                                <button class="search-button" type="submit">
+                                    <span class="icon fa fa-search" aria-hidden="true"></span><span
+                                        class="sr">${_("Search")}</span>
+                                </button>
+                            </form>
+                        </div>
+                    % endif
+
+                </div>
+
+##                 <a href="#video-modal" class="media" rel="leanModal">
+##                     <div class="hero">
+##                         <div class="play-intro"></div>
+##                     </div>
+##                 </a>
             </div>
-          % endif
 
-        </div>
+        </header>
+        <section>
+            <h1>Learn programming with Craft Academy.</h1>
+        </section>
+        <%include file="${courses_list}" />
 
-        <a href="#video-modal" class="media" rel="leanModal">
-          <div class="hero">
-            <div class="play-intro"></div>
-          </div>
-        </a>
-      </div>
-
-    </header>
-    <%include file="${courses_list}" />
-
-  </section>
+    </section>
 </main>
 
 <section id="video-modal" class="modal home-page-video-modal video-modal">
-  <div class="inner-wrapper">
-    <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/FUGHfvxaHHU?showinfo=0" frameborder="0" allowfullscreen></iframe>
-  </div>
+    <div class="inner-wrapper">
+        <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/FUGHfvxaHHU?showinfo=0"
+                frameborder="0" allowfullscreen></iframe>
+    </div>
 </section>
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            if (getParameterByName('next')) {
+                $('#login').trigger("click");
+            }
+        })
+    </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
-  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+    ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
-<script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
-</script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#signup_action').trigger("click");
+        });
+    </script>
 % endif
