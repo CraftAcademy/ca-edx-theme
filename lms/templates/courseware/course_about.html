@@ -162,7 +162,7 @@
               reg_href = ecommerce_checkout_link
               reg_element_id = ""
                         %>
-                            <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
+                            <a href="${reg_href}" class="btn btn-blue" style="color: white; position: absolute; bottom: 5px;" id="${reg_element_id}">
                                 ${_("Add {course_name} to Cart <span>({price} USD)</span>") \
                                 .format(course_name=course.display_number_with_default, price=course_price)}
                             </a>
@@ -174,11 +174,11 @@
                             else:
               reg_href="#"
                             if professional_mode:
-              href_class = "add-to-cart"
+              href_class = "btn btn-blue"
                             else:
-              href_class = "register"
+              href_class = "btn btn-blue"
                         %>
-                            <a href="${reg_href}" class="${href_class}">
+                            <a href="${reg_href}" class="${href_class}" style="color: white; position: absolute; bottom: 5px;">
                                 ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
                             </a>
                             <div id="register_error"></div>
