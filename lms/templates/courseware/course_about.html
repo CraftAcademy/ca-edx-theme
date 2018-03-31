@@ -107,13 +107,7 @@
 </%block>
 
 <%block name="pagetitle">${course.display_name_with_default_escaped}</%block>
-<style>
-    .extended-button {
-        color: white;
-        position: absolute;
-        bottom: 10px;
-    }
-</style>
+
 <section class="course-info">
 
 <%block name="course_about_header">
@@ -141,7 +135,7 @@
                         %endif
 
                         %elif in_cart:
-                            <span class="btn btn-blue extended-button">
+                            <span class="btn btn-blue" style="color: white; position: absolute; bottom: 5px;">
                                 ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
                             </span>
                         % elif is_course_full:
@@ -158,15 +152,15 @@
                         %elif can_add_course_to_cart:
                         <%
                             if user.is_authenticated():
-                            reg_href = "#"
-                            reg_element_id = "add_to_cart_post"
+            reg_href = "#"
+            reg_element_id = "add_to_cart_post"
                             else:
-                            reg_href = reg_then_add_to_cart_link
-                            reg_element_id = "reg_then_add_to_cart"
+            reg_href = reg_then_add_to_cart_link
+            reg_element_id = "reg_then_add_to_cart"
                         %>
                         <% if ecommerce_checkout:
-                            reg_href = ecommerce_checkout_link
-                            reg_element_id = ""
+              reg_href = ecommerce_checkout_link
+              reg_element_id = ""
                         %>
                             <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
                                 ${_("Add {course_name} to Cart <span>({price} USD)</span>") \
@@ -176,13 +170,13 @@
                         %else:
                         <%
                             if ecommerce_checkout:
-                            reg_href = ecommerce_checkout_link
+              reg_href = ecommerce_checkout_link
                             else:
-                            reg_href="#"
+              reg_href="#"
                             if professional_mode:
-                            href_class = "btn btn-blue extended-button"
+              href_class = "add-to-cart"
                             else:
-                            href_class = "btn btn-blue extended-button"
+              href_class = "register"
                         %>
                             <a href="${reg_href}" class="${href_class}">
                                 ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
@@ -287,8 +281,7 @@
 
                     ##<li class="important-dates-item"><span class="icon fa fa-clock-o" aria-hidden="true"></span><p class="important-dates-item-title">${_('Course Length')}</p><span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span></li>
 
-                    %if course_price:
-                    ##%if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
+                    %if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled):
                         <li class="important-dates-item">
                             <span class="icon fa fa-money" aria-hidden="true"></span>
                             <p class="important-dates-item-title">${_("Price")}</p>
