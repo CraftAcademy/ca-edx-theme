@@ -37,5 +37,5 @@ openedX Theme for Craft Academy
     If you're still logged in as `edxapp` you can exit with `ctrl-d` then restart the app with the following command
 
     ```bash
-    sudo /edx/bin/supervisor restart edxapp:
+    sudo /edx/bin/supervisorctl restart edxapp:
     ```
