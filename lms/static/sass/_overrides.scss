@@ -4,13 +4,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  font-weight: 500 !important;
   color: #f28e24 !important;
   margin: 0 0 1.5rem !important;
+}
+
+.btn {
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
 }
 
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
@@ -58,12 +61,12 @@ p {
     margin-left: 0;
 
     > .heading-group h1 {
-      color: $white;
+      color: $white !important;
       text-shadow: none;
     }
 
     > .heading-group p {
-      color: $white;
+      color: $white !important;
     }
   }
 }
