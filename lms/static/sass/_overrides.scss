@@ -24,6 +24,31 @@ h6 {
   font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
 }
 
+.home>header .media .hero {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: url(https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG) center no-repeat;
+    background-size: cover;
+}
+
+.home>header .media {
+    background: #fff;
+    background: rgba(255,255,255,0.93);
+    border: 1px solid #646464;
+    border-left: 0;
+    box-sizing: border-box;
+    height: 220px;
+    width: 300px !important;
+    float: left;
+    padding: 4px;
+    position: relative;
+    vertical-align: top;
+    width: 17.05961%;
+    z-index: 2;
+}
+
+
 .header-global .user .user-dropdown-menu li > a {
   border: 1px solid transparent;
   /* border-radius: 3px; */
