@@ -5,13 +5,12 @@ h4,
 h5,
 h6 {
   font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  line-height: 1.1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
-  font-weight: 500;
-  color: #f28e24;
-  margin: 0 0 1.5rem;
+  font-weight: 500 !important;
+  color: #f28e24 !important;
+  margin: 0 0 1.5rem !important;
 }
 
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
@@ -20,9 +19,8 @@ h6 {
 }
 
 footer#footer-edx-v3 p {
-    font-size: 14px;
-    line-height: 20.72px;
-    /* font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif; */
+  font-size: 14px;
+  line-height: 20.72px;
 }
 
 .article li,
@@ -30,9 +28,8 @@ footer#footer-edx-v3 p {
 li,
 p {
   margin: 0 0 1.5rem;
-  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
   font-size: 16px;
-  color: #444;
   line-height: 1.5rem;
 }
 
