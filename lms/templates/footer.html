@@ -44,14 +44,7 @@
     </nav>
     % if not hide_openedx_link:
     <div class="openedx-link">
-      <p class="copyright">
-        <small>${_(
-          u"EdX, Open edX and the edX and Open edX logos are registered trademarks "
-          u"or trademarks of edX Inc."
-          ).format(year=datetime.datetime.now().year)}
-          ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}
-        </small>
-      </p>
+      <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
       <a href="${footer['openedx_link']['url']}" title="${footer['openedx_link']['title']}">
         <img alt="${footer['openedx_link']['title']}" src="${footer['openedx_link']['image']}" style="width: 70px; height: auto;">
       </a>
