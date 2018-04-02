@@ -16,6 +16,21 @@ h6 {
   font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
 }
 
+.header-global .user .user-dropdown-menu li>a {
+    border: 1px solid transparent;
+    /* border-radius: 3px; */
+    color: #0075b4;
+    cursor: pointer;
+    display: block;
+    margin: 20px 0px;
+    padding: 9px 0px 0px;
+    text-overflow: ellipsis;
+    transition: padding 0.15s linear 0s;
+    white-space: nowrap;
+    width: 100%;
+    line-height: 0.5 !important;
+}
+
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
   color: #646464;
   float: left;
