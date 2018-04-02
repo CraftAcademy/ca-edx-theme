@@ -29,10 +29,8 @@
 
     ## \u00A9 is the copyright symbol.
     ## \u2013 is the en-dash. It looks like a year, but it isn't.
-    <p class="copyright">${_(
-      u"\u00A9 2015\u2013{year} Craft Academy.
-      All rights reserved except where noted.")
-      .format(year=datetime.datetime.now().year)}
+    <p class="copyright">
+      ${_(u"\u00A9 2015\u2013{year} Craft Academy. All rights reserved except where noted.").format(year=datetime.datetime.now().year)}
     </p>
 
     <nav class="legal-notices" aria-label="${_("Legal")}">
@@ -48,8 +46,7 @@
     <div class="openedx-link">
       <p class="copyright">
         <small>
-          ${_(
-          u"EdX, Open edX and the edX and Open edX logos are registered trademarks "
+          ${_(u"EdX, Open edX and the edX and Open edX logos are registered trademarks "
           u"or trademarks of edX Inc."
           ).format(year=datetime.datetime.now().year)}
           ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}
