@@ -1,27 +1,40 @@
-h1, h2, h3, h4, h5, h6 {
-    font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.5rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
-    font-weight: 500;
-    color: #f28e24;
-    margin: 0 0 1.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  line-height: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+  color: #f28e24;
+  margin: 0 0 1.5rem;
 }
 
-p, .article p, .article li, li {
-    margin: 0 0 1.5rem;
-    font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 16px;
-    color: #444;
-    line-height: 1.5rem;
+.course-info .course-sidebar .important-dates li .important-dates-item-title {
+  color: #646464;
+  float: left;
 }
 
+footer#footer-edx-v3 p {
+    font-size: 14px;
+    line-height: 20.72px;
+    /* font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif; */
+}
 
-
-
-
+.article li,
+.article p,
+li,
+p {
+  margin: 0 0 1.5rem;
+  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5rem;
+}
 
 .header-global {
   border-bottom: 2px solid transparent;
@@ -29,7 +42,6 @@ p, .article p, .article li, li {
   h1.logo img {
     max-height: 40px;
     width: auto;
-
   }
 }
 
@@ -61,7 +73,7 @@ p, .article p, .article li, li {
 
 .wrapper-footer {
   p {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 }
 
@@ -76,7 +88,7 @@ p, .article p, .article li, li {
 }
 
 .course-info header.course-profile {
-  background-image: url(https://assets.craftacademy.se/images/backgrounds/splash_3.jpg);
+  background-image: url("https://assets.craftacademy.se/images/backgrounds/splash_3.jpg");
 }
 
 .course-info header.course-profile .intro-inner-wrapper {
