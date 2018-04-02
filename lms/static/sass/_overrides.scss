@@ -1,10 +1,18 @@
+body,
+html {
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  font-size: 1.1rem;
+  font-style: normal;
+  line-height: 1em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $main-font !important;
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
@@ -13,7 +21,7 @@ h6 {
 }
 
 .btn {
-  font-family: $main-font !important;
+  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
 }
 
 .header-global .user .user-dropdown-menu li > a {
@@ -45,7 +53,7 @@ footer#footer-edx-v3 p {
 li,
 p {
   margin: 0 0 1.5rem;
-  font-family: $main-font !important;
+  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
   font-size: 16px;
   line-height: 1.5rem;
 }
