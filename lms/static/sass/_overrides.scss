@@ -1,5 +1,4 @@
-$ca-font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto",
-  "Arial", sans-serif !important;
+@import "./fonts";
 
 $hero-img: "https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG";
 
@@ -17,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $ca-font-family;
+  font-family: $ca-header-font-family;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
