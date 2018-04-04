@@ -5,9 +5,7 @@ $hero-img: "https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+t
 body,
 html {
   font-family: $ca-font-family;
-  font-size: 1.1rem;
-  font-style: normal;
-  line-height: 1em;
+  line-height: 1.5em;
 }
 
 h1,
@@ -70,18 +68,18 @@ h6 {
 }
 
 footer#footer-edx-v3 {
-  padding: 20px 10px 40px;
+  padding: 20px 10px 40px !important;
 
   .copyright {
-    margin-top: 15px;
+    margin-top: 15px !important;
   }
 
   .legal-notices {
-    margin: 10px 0;
+    margin: 10px 0 !important;
   }
 
   .openedx-link {
-    margin: 42px 0 10px;
+    margin: 42px 0 10px !important;
   }
 
   p {
@@ -102,8 +100,9 @@ p {
   border-bottom: 2px solid transparent;
 
   &.slim {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent !important;
   }
+
   h1.logo img {
     max-height: 40px;
     width: auto;
@@ -129,6 +128,7 @@ p {
       color: $white !important;
 
       h1 {
+        color: $white !important;
         text-shadow: none;
       }
     }
@@ -151,12 +151,27 @@ p {
   }
 }
 
-.course-info header.course-profile {
-  background-image: url("https://assets.craftacademy.se/images/backgrounds/splash_3.jpg");
+.course-info {
+  .details {
+    h2,
+    h3,
+    h4,
+    strong {
+      font-family: $ca-header-font-family;
+    }
 
-  .intro-inner-wrapper {
-    border: none;
-    box-shadow: none;
+    p {
+      font-family: $ca-font-family;
+    }
+  }
+
+  header.course-profile {
+    background-image: url("https://assets.craftacademy.se/images/backgrounds/splash_3.jpg");
+
+    .intro-inner-wrapper {
+      border: none;
+      box-shadow: none;
+    }
   }
 }
 
@@ -171,4 +186,13 @@ p {
 
 .window-wrap {
   background: #f5f5f5;
+}
+
+.course-title {
+  color: #f28e24 !important;
+}
+
+.learn-more {
+  border-color: #f28e24 !important;
+  background: #f28e24 !important;
 }
