@@ -127,9 +127,19 @@ p {
     > .heading-group {
       color: $white !important;
 
-      h1 {
+      h1,
+      p {
         color: $white !important;
+        font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial",
+          sans-serif !important;
+      }
+
+      h1 {
         text-shadow: none;
+      }
+
+      p {
+        width: 80%;
       }
     }
   }
