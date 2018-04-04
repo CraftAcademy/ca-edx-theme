@@ -1,6 +1,11 @@
+$ca-font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto",
+  "Arial", sans-serif !important;
+
+$hero-img: "https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG";
+
 body,
 html {
-  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  font-family: $ca-font-family;
   font-size: 1.1rem;
   font-style: normal;
   line-height: 1em;
@@ -12,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  font-family: $ca-font-family;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
@@ -21,46 +26,43 @@ h6 {
 }
 
 .btn {
-  font-family: "gotham-medium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
+  font-family: $ca-font-family;
 }
 
-.home>header .media .hero {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background: url(https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG) center no-repeat;
-    background-size: cover;
-}
-
-.home>header .media {
-    background: #fff;
-    background: rgba(255,255,255,0.93);
-    border: 1px solid #646464;
+.home > header {
+  .media {
+    background: $white;
     border-left: 0;
+    border: 1px solid #646464;
     box-sizing: border-box;
-    height: 220px;
-    width: 300px !important;
     float: left;
+    height: 220px;
     padding: 4px;
     position: relative;
     vertical-align: top;
-    width: 17.05961%;
+    width: 300px !important;
     z-index: 2;
-}
 
+    .hero {
+      height: 100%;
+      overflow: hidden;
+      background: url($hero-img) center no-repeat;
+      background-size: cover;
+    }
+  }
+}
 
 .header-global .user .user-dropdown-menu li > a {
   border: 1px solid transparent;
-  /* border-radius: 3px; */
   color: #0075b4;
   cursor: pointer;
   display: block;
-  margin: 20px 0;
+  line-height: 0.5 !important;
+  margin: 6px 0;
   text-overflow: ellipsis;
   transition: padding 0.15s linear 0s;
   white-space: nowrap;
   width: 100%;
-  line-height: 0.5 !important;
 }
 
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
@@ -68,24 +70,41 @@ h6 {
   float: left;
 }
 
-footer#footer-edx-v3 p {
-  font-size: 14px;
-  line-height: 20.72px;
+#footer-edx-v3 {
+  padding: 20px 10px 40px;
+
+  .copyright {
+    margin-top: 15px;
+  }
+
+  .legal-notices {
+    margin: 10px 0;
+  }
+
+  .openedx-link {
+    margin: 42px 0 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20.72px;
+  }
 }
 
 .article li,
 .article p,
-li,
 p {
-  margin: 0 0 1.5rem;
-  font-family: "gotham-light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif !important;
   font-size: 16px;
   line-height: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .header-global {
   border-bottom: 2px solid transparent;
 
+  &.slim {
+    border-bottom: 1px solid transparent;
+  }
   h1.logo img {
     max-height: 40px;
     width: auto;
@@ -93,7 +112,7 @@ p {
 }
 
 .home > header {
-  background: url('https://assets.craftacademy.se/images/backgrounds/splash_3.jpg');
+  background: url("https://assets.craftacademy.se/images/backgrounds/splash_3.jpg");
   background-position: 50%;
   background-size: cover;
 
@@ -107,13 +126,12 @@ p {
     box-shadow: none;
     margin-left: 0;
 
-    > .heading-group h1 {
+    > .heading-group {
       color: $white !important;
-      text-shadow: none;
-    }
 
-    > .heading-group p {
-      color: $white !important;
+      h1 {
+        text-shadow: none;
+      }
     }
   }
 }
@@ -136,14 +154,22 @@ p {
 
 .course-info header.course-profile {
   background-image: url("https://assets.craftacademy.se/images/backgrounds/splash_3.jpg");
-}
 
-.course-info header.course-profile .intro-inner-wrapper {
-  border: none;
-  box-shadow: none;
+  .intro-inner-wrapper {
+    border: none;
+    box-shadow: none;
+  }
 }
 
 .nav-colophon,
 .nav-legal > ul > li:last-child {
   display: none;
+}
+
+.info-wrapper {
+  background-color: $white;
+}
+
+.window-wrap {
+  background: #f5f5f5;
 }
