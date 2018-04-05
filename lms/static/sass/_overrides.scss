@@ -3,8 +3,7 @@
 $hero-img: "https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG";
 
 body,
-html,
- {
+html {
   font-family: $ca-font-family;
   line-height: 1.5em;
 }
@@ -93,7 +92,7 @@ footer#footer-edx-v3 {
 .article li,
 .article p,
 p {
-  font-family: $ca-font-family !important;
+  font-family: $ca-font-family;
   font-size: 16px;
   line-height: 1.5rem;
   margin: 0 0 1.5rem;
@@ -133,7 +132,7 @@ p {
       h1,
       p {
         color: $white !important;
-        font-family: font-family: $ca-font-family !important;
+        font-family: $ca-font-family;
       }
 
       h1 {
