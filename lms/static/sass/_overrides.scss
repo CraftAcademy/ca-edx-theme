@@ -14,12 +14,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $ca-header-font-family;
+  font-family: $ca-font-family;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   color: #f28e24 !important;
   margin: 0 0 1.5rem !important;
+  font-weight: bold !important;
 }
 
 .btn {
