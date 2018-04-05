@@ -3,9 +3,16 @@
 $hero-img: "https://class.craftacademy.co/asset-v1:CraftAcademy+NECT-01+2018-1+type@asset+block@IMG_6362.JPG";
 
 body,
-html {
+html,
+ul,
+li,
+p,
+input,
+a,
+span,
+section, {
   font-family: $ca-font-family;
-  line-height: 1.5em;
+  line-height: 1.4em;
 }
 
 h1,
