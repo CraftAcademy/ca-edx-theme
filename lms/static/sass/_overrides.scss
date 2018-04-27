@@ -209,3 +209,18 @@ p {
   border-color: #f28e24 !important;
   background: #f28e24 !important;
 }
+
+p code {
+  background-color: #f6f8fa;
+  border-right-width: 3px #f6f8fa solid;
+  border-left: 7px #f6f8fa solid;
+  border-right: 7px #f6f8fa solid;
+}
+
+.codehilite {
+  padding-left: 16px;
+  overflow: auto;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  margin-bottom: 16px;
+}
