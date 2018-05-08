@@ -217,10 +217,19 @@ p code {
   border-right: 7px #f6f8fa solid;
 }
 
+code {
+  color: inherit !important;
+  background-color: #f6f8fa !important;
+}
+
 .codehilite {
   padding-left: 16px;
   overflow: auto;
   line-height: 1.45;
   background-color: #f6f8fa;
   margin-bottom: 16px;
+}
+
+.course-header {
+  letter-spacing: normal;
 }
