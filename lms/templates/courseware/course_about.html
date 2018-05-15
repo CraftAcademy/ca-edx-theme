@@ -115,13 +115,13 @@
         <div class="intro-inner-wrapper">
             <div class="table">
                 <section class="intro">
-                    <div class="heading-group" style="position: absolute; top: 20px; width: 95%;">
+                    <div class="heading-group" style="position: relative; top: 20px; width: 95%;">
                         <h1>
                             ${course.display_name_with_default_escaped}
                         </h1>
                     </div>
 
-                    <div class="main-cta">
+                    <div class="main-cta" style="position: relative; margin-top: 20px;">
                         %if user.is_authenticated() and registered:
                         %if show_courseware_link:
                             <a href="${course_target}">
@@ -130,12 +130,12 @@
                             <span class="register disabled">${_("You are enrolled in this course")}</span>
 
                         %if show_courseware_link:
-                            <strong>${_("View Course")}</strong>
+                            <span class="btn btn-blue" style="padding: 10px 20px">${_("View Course")}</span>
                         </a>
                         %endif
 
                         %elif in_cart:
-                            <span class="btn btn-blue" style="color: white; position: absolute; bottom: 5px;">
+                            <span class="btn btn-blue" style="padding: 10px 20px">
                                 ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
                             </span>
                         % elif is_course_full:
@@ -162,8 +162,8 @@
               reg_href = ecommerce_checkout_link
               reg_element_id = ""
                         %>
-                            <a href="${reg_href}" class="btn btn-blue" style="color: white; position: absolute; bottom: 5px;" id="${reg_element_id}">
-                                ${_("Add {course_name} to Cart <span>({price} USD)</span>") \
+                            <a href="${reg_href}" class="btn btn-blue" style="padding: 10px 20px; margin-bottom: 0;" id="${reg_element_id}">
+                                ${_("Add {course_name} to Cart <span>({price} Kr)</span>") \
                                 .format(course_name=course.display_number_with_default, price=course_price)}
                             </a>
                             <div id="register_error"></div>
@@ -178,7 +178,7 @@
                             else:
               href_class = "btn btn-blue"
                         %>
-                            <a href="${reg_href}" class="${href_class}" style="color: white; position: absolute; bottom: 5px;">
+                            <a href="${reg_href}" class="${href_class}" style="padding: 10px 20px; margin-bottom: 0;">
                                 ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
                             </a>
                             <div id="register_error"></div>
