@@ -130,12 +130,12 @@
                             <span class="register disabled">${_("You are enrolled in this course")}</span>
 
                         %if show_courseware_link:
-                            <span class="btn btn-blue" style="padding: 10px 20px">${_("View Course")}</span>
+                            <span class="btn btn-blue" style="color: white; padding: 10px 20px">${_("View Course")}</span>
                         </a>
                         %endif
 
                         %elif in_cart:
-                            <span class="btn btn-blue" style="padding: 10px 20px">
+                            <span class="btn btn-blue" style="color: white; padding: 10px 20px">
                                 ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
                             </span>
                         % elif is_course_full:
@@ -162,7 +162,7 @@
               reg_href = ecommerce_checkout_link
               reg_element_id = ""
                         %>
-                            <a href="${reg_href}" class="btn btn-blue" style="padding: 10px 20px; margin-bottom: 0;" id="${reg_element_id}">
+                            <a href="${reg_href}" class="btn btn-blue" style="color: white; padding: 10px 20px; margin-bottom: 0;" id="${reg_element_id}">
                                 ${_("Add {course_name} to Cart <span>({price} Kr)</span>") \
                                 .format(course_name=course.display_number_with_default, price=course_price)}
                             </a>
@@ -178,7 +178,7 @@
                             else:
               href_class = "btn btn-blue"
                         %>
-                            <a href="${reg_href}" class="${href_class}" style="padding: 10px 20px; margin-bottom: 0;">
+                            <a href="${reg_href}" class="${href_class}" style="color: white; padding: 10px 20px; margin-bottom: 0;">
                                 ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
                             </a>
                             <div id="register_error"></div>
