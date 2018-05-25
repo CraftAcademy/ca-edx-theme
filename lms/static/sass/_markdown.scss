@@ -292,15 +292,16 @@
     border: 0;
   }
   blockquote {
-    padding: 0 1em;
+    padding: 1em;
     color: #6a737d;
-    border-left: 0.25em solid #dfe2e5;
+    border-left: 0.25em solid #f28e24;
+    background: #f28e2417;
     > {
       :first-child {
         margin-top: 0;
       }
       :last-child {
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
       }
     }
   }
