@@ -23,6 +23,11 @@
 
 <%block name="js_extra">
     <script type="text/javascript">
+	$( document ).ready(function() {
+	    let imageSrc = document.querySelector('.hero').firstElementChild.src
+	    let banner = document.querySelector('.course-profile ')
+ 	    banner.style.backgroundImage = 'url(' + imageSrc +')'
+	});
         (function () {
             $(".register").click(function (event) {
                 $("#class_enroll_form").submit();
