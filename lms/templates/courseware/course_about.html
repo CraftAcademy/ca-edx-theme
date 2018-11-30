@@ -130,12 +130,12 @@ from openedx.core.lib.courses import course_image_url
           <span class="register disabled">${_("You are enrolled in this course")}</span>
 
           %if show_courseware_link:
-            <strong>${_("View Course")}</strong>
+            <strong class="btn btn-blue" style="color: white; padding: 10px 20px">${_("View Course")}</strong>
             </a>
           %endif
 
         %elif in_cart:
-          <span class="add-to-cart">
+          <span class="btn btn-blue" style="color: white; padding: 10px 20px">
             ${_('This course is in your <a href="{cart_link}">cart</a>.').format(cart_link=cart_link)}
           </span>
         % elif is_course_full:
@@ -178,7 +178,7 @@ from openedx.core.lib.courses import course_image_url
             else:
               href_class = "view-course-button btn-brand btn cta-primary"
           %>
-          <a href="${reg_href}" class="${href_class}">
+          <a href="${reg_href}" class="${href_class}" style="color: white; padding: 10px 20px; margin-bottom: 0;">
             ${_("Enroll in {course_name}").format(course_name=course.display_number_with_default) | h}
           </a>
           <div id="register_error"></div>
