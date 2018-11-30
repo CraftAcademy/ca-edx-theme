@@ -163,7 +163,7 @@ from openedx.core.lib.courses import course_image_url
               reg_element_id = ""
           %>
           <a href="${reg_href}" class="view-course-button btn-brand btn cta-primary" id="${reg_element_id}">
-            ${_("Add {course_name} to Cart <span>({price} USD)</span>")\
+            ${_("Add {course_name} to Cart <span>({price})</span>")\
               .format(course_name=course.display_number_with_default, price=course_price)}
           </a>
           <div id="register_error"></div>
