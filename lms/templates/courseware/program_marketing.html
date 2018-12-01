@@ -58,13 +58,7 @@ description_max_length = 250
     <div class="grid-manual">
       <div class="row">
         <div class="col col-12 md-col-8 lg-col-9">
-          <div class="org-logo">
-            % if authoring_organizations and authoring_organizations[0]['logo_image_url']:
-              <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}">
-            % endif
-          </div>
           <h1 class="banner-title">${title}</h1>
-          <p class="banner-description">A Craft Academy Training Program</p>
           <p class="banner-description">${subtitle}</p>
           <small>${program['instructors']}</small>
           % if program.get('is_learner_eligible_for_one_click_purchase'):
@@ -277,6 +271,12 @@ description_max_length = 250
       </div>
 
       <div class="col col-12 md-col-5 lg-col-4 right-col hidden-sm">
+        <div class="org-logo">
+          % if authoring_organizations and authoring_organizations[0]['logo_image_url']:
+            <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}">
+          % endif
+        </div>
+        % if instructors:
         <h2 class="instructors-title">
           ${_('Meet the Instructors')}
           <span>(${len(instructors)})</span>
@@ -327,6 +327,7 @@ description_max_length = 250
               </div>
             </div>
           % endfor
+          % endif
 
           <div class="pagination hidden-xs">
             <div class="pages">
