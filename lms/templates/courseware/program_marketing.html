@@ -176,6 +176,7 @@ description_max_length = 250
               </ul>
             </div>
           </div>
+          % if instructors:
           <div class="accordion-item instructors-mobile-list">
             <div class="accordion-head">${_("Instructors")}</div>
             <div class="accordion-content">
@@ -230,6 +231,7 @@ description_max_length = 250
               </div>
             </div>
           </div>
+          % endif
 
           % try:
             <%include file="_${program_type_slug}_faq.html" args="program_type=program_type" />
@@ -251,9 +253,9 @@ description_max_length = 250
             </div>
           </div>
         </div>
+        % if endorsement:
         <blockquote class="program-quote visible-sm">
           <div class="quote">
-            % if endorsement:
               <span>"${endorsement_quote}"</span>
                 % if endorser:
                   % if endorsement_image:
@@ -265,15 +267,16 @@ description_max_length = 250
                     ${endorsement_organization}
                   </span>
                 % endif
-            % endif
           </div>
         </blockquote>
+        % endif
       </div>
 
       <div class="col col-12 md-col-5 lg-col-4 right-col hidden-sm">
         <div style="width: 200px; height: auto;">
           % if authoring_organizations and authoring_organizations[0]['logo_image_url']:
             <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}">
+            <p> ${authoring_organizations[0]['homepage_url']} </p>
           % endif
         </div>
         % if instructors:
