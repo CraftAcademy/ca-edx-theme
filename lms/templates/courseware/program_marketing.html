@@ -25,8 +25,7 @@ instructors = program['instructors']
 job_outlook_items = program['job_outlook_items']
 weeks_to_complete = program['weeks_to_complete']
 full_program_price_format = '{0:.0f}' if program['full_program_price'].is_integer() else '{0:.2f}'
-# full_program_price = full_program_price_format.format(program['full_program_price'])
-full_program_price = program['full_program_price']
+full_program_price = full_program_price_format.format(program['full_program_price'])
 endorsement = program['individual_endorsements'][0] if program['individual_endorsements'] else {}
 endorsement_quote = endorsement.get('quote', '')
 endorser = endorsement.get('endorser', {})
@@ -123,17 +122,17 @@ description_max_length = 250
             % if program.get('discount_data') and program['discount_data']['is_discounted']:
               <span class="price">
                 <span role="group" aria-label="${_('Original Price')}" class="original-price">
-                  ${Text(_('${oldPrice}')).format(
+                  ${Text(_('{oldPrice}')).format(
                     oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts'])
                   )}
                 </span>
                 <span role="group" aria-label="${_('Discounted Price')}" class="discount green-highlight">
-                  ${Text(_('${newPrice}{htmlEnd} for entire program')).format(
+                  ${Text(_('{newPrice}{htmlEnd} for entire program')).format(
                     newPrice=full_program_price,
                     htmlEnd=HTML('</span>')
                   )}
                 <span class="savings green-highlight">
-                  ${Text(_('You save ${discount_value} {currency}')).format(
+                  ${Text(_('You save {discount_value} {currency}')).format(
                     discount_value=full_program_price_format.format(program['discount_data']['discount_value']),
                     currency=program['discount_data']['currency']
                   )}
@@ -383,8 +382,6 @@ description_max_length = 250
   </div>
 
   <div class="container courses-in-program" id="courses">
-    <h3>${full_program_price_format}</h3>
-    <h3>${full_program_price}</h3>
     <h3 class="hd">
       ${Text(_('Courses in the {program_type}')).format(
         program_type=program_type
