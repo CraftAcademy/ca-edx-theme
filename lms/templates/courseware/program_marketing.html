@@ -273,10 +273,11 @@ description_max_length = 250
       </div>
 
       <div class="col col-12 md-col-5 lg-col-4 right-col hidden-sm">
-        <div style="width: 200px; height: auto;">
+        <div style="width: 100%; height: auto;">
           % if authoring_organizations and authoring_organizations[0]['logo_image_url']:
-            <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}">
-            <p> ${authoring_organizations[0]['homepage_url']} </p>
+            <a href="${authoring_organizations[0]['homepage_url']}" target="_blank">
+              <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}" style="width: 150px; height: auto;display: block;margin: 0 auto;">
+            </a>
           % endif
         </div>
         % if instructors:
