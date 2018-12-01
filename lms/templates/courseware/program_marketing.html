@@ -127,7 +127,7 @@ description_max_length = 250
                   )}
                 </span>
                 <span role="group" aria-label="${_('Discounted Price')}" class="discount green-highlight">
-                  ${Text(_('{newPrice}{htmlEnd} {currency} for entire program')).format(
+                  ${Text(_('{newPrice} {currency} {htmlEnd}  for entire program')).format(
                     newPrice=full_program_price,
                     htmlEnd=HTML('</span>')
                   )}
@@ -140,7 +140,7 @@ description_max_length = 250
               </span>
             % else:
               <span>
-                ${Text(_('${full_program_price} {currency} for entire program')).format(
+                ${Text(_('{full_program_price} {currency} for entire program')).format(
                   full_program_price=full_program_price
                 )}
               </span>
