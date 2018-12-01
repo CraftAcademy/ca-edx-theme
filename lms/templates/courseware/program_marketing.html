@@ -402,12 +402,6 @@ description_max_length = 250
                         course_start_datetime=datetime.strptime(course['course_runs'][0]['start'], '%Y-%m-%dT%H:%M:%SZ').strftime('%B %-d, %Y')
                       )}
                     </span>
-
-                    % if course['course_runs'][0]['pacing_type'] == "instructor_paced":
-                      <span>${_('Instructor - Paced')}</span>
-                    % else:
-                      <span>${_('Self - Paced')}</span>
-                    % endif
                   </small>
                 </h4>
                 <p class="copy-meta">
@@ -434,9 +428,7 @@ description_max_length = 250
 
   <section id="video-modal" class="modal modal-custom custom-video-modal">
     <div class="inner-wrapper">
-      <iframe title="${_('YouTube Video')}" width="640" height="360"
-              src="${video_url}"
-              frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="${video_url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </section>
 </div>
