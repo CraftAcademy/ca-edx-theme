@@ -271,7 +271,7 @@ description_max_length = 250
       </div>
 
       <div class="col col-12 md-col-5 lg-col-4 right-col hidden-sm">
-        <div class="org-logo">
+        <div style="width: 200px; height: auto;">
           % if authoring_organizations and authoring_organizations[0]['logo_image_url']:
             <img src="${authoring_organizations[0]['logo_image_url']}" alt="${authoring_organizations[0]['name']}">
           % endif
@@ -327,7 +327,6 @@ description_max_length = 250
               </div>
             </div>
           % endfor
-          % endif
 
           <div class="pagination hidden-xs">
             <div class="pages">
@@ -352,6 +351,7 @@ description_max_length = 250
             </div>
           </div>
         </div>
+        % endif
         <blockquote class="program-quote">
           <div class="quote">
             % if endorsement:
