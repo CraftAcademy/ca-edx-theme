@@ -122,7 +122,7 @@ description_max_length = 250
             % if program.get('discount_data') and program['discount_data']['is_discounted']:
               <span class="price">
                 <span role="group" aria-label="${_('Original Price')}" class="original-price">
-                  ${Text(_('{oldPrice}')).format(
+                  ${Text(_('{oldPrice} {currency}')).format(
                     oldPrice=full_program_price_format.format(program['discount_data']['total_incl_tax_excl_discounts'])
                   )}
                 </span>
@@ -140,7 +140,7 @@ description_max_length = 250
               </span>
             % else:
               <span>
-                ${Text(_('${full_program_price} for entire program')).format(
+                ${Text(_('${full_program_price} {currency} for entire program')).format(
                   full_program_price=full_program_price
                 )}
               </span>
