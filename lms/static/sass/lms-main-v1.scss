@@ -4,6 +4,11 @@
 // Import our custom overrides
 @import 'overrides';
 
+.global-header .header-logo a .logo {
+  float: left;
+  height: auto;
+}
+
 .course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong {
   color: red;
 }
