@@ -9,82 +9,63 @@ from openedx.core.djangolib.markup import HTML, Text
 %>
 
 <main id="main" aria-label="Content" tabindex="-1">
-  <section class="home">
-    <header>
-      <div class="outer-wrapper">
-        <div class="title">
-          <div class="heading-group">
-            <h1>Craft Academy <strong>Redefining online learning! </strong></h1>
-            <p>Online courses with real instructors and coach support.</p>
-          </div>
-          % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-          <div class="course-search">
-            <form method="get" action="/courses">
-              <label><span class="sr">${_("Search for a course")}</span>
-                <input class="search-input" name="search_query" type="text" placeholder="${_(" Search for a course")}"></input>
-              </label>
-              <button class="search-button" type="submit">
-                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
-              </button>
-            </form>
-          </div>
-          % endif
+    <section class="home">
+      <header>
+        <div class="outer-wrapper">
+          <div class="title">
+            <div class="heading-group">
+              % if homepage_overlay_html:
+                ${homepage_overlay_html | n, decode.utf8}
+              % else:
+                <%include file="index_overlay.html" />
+              % endif
+            </div>
+            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+              <div class="course-search">
+                <form method="get" action="/courses">
+                  <label><span class="sr">${_("Search for a course")}</span>
+                    <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                  </label>
+                  <button class="search-button" type="submit">
+                    <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                  </button>
+                </form>
+              </div>
+            % endif
 
+          </div>
+
+          <%include file="index_promo_video.html" />
         </div>
 
-        <a href="#video-modal" class="media" rel="leanModal">
-          <div class="hero">
-            <div class="play-intro"></div>
-          </div>
-        </a>
-      </div>
+      </header>
+      <%include file="${courses_list}" />
 
-    </header>
-    <section style="margin-top: 1rem; text-align: center;">
-      <h1>Start Learning Today</h1>
-      <h3>Development is more than just
-        <pre style="display: inline; text-transform: lowercase;">
-          &lt;code&gt;
-        </pre>
-      </h3>
-      <p>
-        <strong>
-          Just starting out, or building on top of your existing programming skills?
-        </strong>
-      </p>
-      <p>
-        <strong>
-          Level up with our online courses and connect with experienced coaches anytime.
-        </strong>
-      </p>
     </section>
-    <%include file="${courses_list}" />
-
-  </section>
 </main>
 
-% if show_homepage_promo_video:
-  <section id="video-modal" class="modal home-page-video-modal video-modal">
-    <div class="inner-wrapper">
-      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-% endif
+<!-- % if show_homepage_promo_video: -->
+<section id="video-modal" class="modal home-page-video-modal video-modal">
+  <div class="inner-wrapper">
+    <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+<!-- % endif -->
 
 <%block name="js_extra">
    <script type="text/javascript">
-    $(window).load(function () {
-      if (getParameterByName('next')) {
-        $('#login').trigger("click");
-      }
-    })
-  </script>
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
   ## NOTE: This won't work in production, because anonymous views are cached, so it will
   ## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function () { $('#signup_action').trigger("click"); });
+  $(window).load(function() {$('#signup_action').trigger("click");});
 </script>
 % endif
