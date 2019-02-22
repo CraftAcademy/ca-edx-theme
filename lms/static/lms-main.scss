@@ -7,3 +7,9 @@
 body {
   font-family: $ca-font-family;
 }
+
+:root {
+  --font-family: $ca-font-family;
+  --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
