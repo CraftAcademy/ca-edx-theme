@@ -1,8 +1,8 @@
 // Import the core Sass file Open edX
-@import "lms/static/sass/lms-main-v1";
+@import "lms-main";
 
-// Import our custom overrides
-@import "overrides";
+// Import custom fonts
+@import "../fonts";
 
 body {
   font-family: $ca-font-family;
